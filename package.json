@@ -23,7 +23,7 @@
     "koa-logger": "^3.2.1",
     "koa-router": "^9.4.0",
     "nedb": "^1.8.0",
-    "reed-mock-server": "0.0.8"
+    "reed-mock-server": "0.0.9"
   },
   "devDependencies": {
     "mocha": "^8.1.3",
