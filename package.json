@@ -1,0 +1,42 @@
+{
+  "name": "iserviceserver",
+  "version": "1.0.0",
+  "description": "server for the intelligent customer service robot",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "init": "cross-env imock init",
+    "dev": "cross-env imock start mock-server.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HansHuang/iServiceServer.git"
+  },
+  "author": "HansHuang",
+  "license": "GPL",
+  "bugs": {
+    "url": "https://github.com/HansHuang/iServiceServer/issues"
+  },
+  "homepage": "https://github.com/HansHuang/iServiceServer#readme",
+  "dependencies": {
+    "cross-env": "^7.0.2",
+    "koa-logger": "^3.2.1",
+    "koa-router": "^9.4.0",
+    "nedb": "^1.8.0",
+    "reed-mock-server": "0.0.8"
+  },
+  "devDependencies": {
+    "mocha": "^8.1.3",
+    "supertest": "^4.0.2"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "test/*",
+      "static/*"
+    ],
+    "delay": "300",
+    "env": {
+      "NODE_ENV": "development"
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "port": "3000",
+  "timeout": 300,
+  "cors": true,
+  "serveStatic": {
+    "enabled": true,
+    "endpoints": [
+      {
+        "endpoint": "",
+        "indexPages": [
+          "index.html",
+          "index.htm"
+        ],
+        "dirPath": "./static"
+      }
+    ]
+  },
+  "serveApi": {
+    "enabled": true,
+    "endpoints": [
+      {
+        "name": "API-1",
+        "endpoint": "/api",
+        "scriptPath": "./src/api.js"
+      }
+    ]
+  },
+  "serveWebsocket": {
+    "enabled": false,
+    "endpoints": [
+      {
+        "endpoint": "/ws",
+        "scriptPath": "./src/ws.js"
+      }
+    ],
+    "options": {}
+  },
+  "serveProxy": {
+    "enabled": false,
+    "endpoints": [
+      {
+        "endpoint": "/proxy-foo",
+        "target": "http://localhost:2999/api/"
+      },
+      {
+        "endpoint": "/proxy-bar",
+        "target": "http://localhost:2999",
+        "options": {}
+      }
+    ],
+    "options": {}
+  },
+  "customMiddleware": {
+    "front": [
+      "./src/logger.js"
+    ],
+    "last": []
+  }
+}

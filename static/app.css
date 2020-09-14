@@ -1,0 +1,21 @@
+body {
+    background: #000;
+    margin: 0;
+    position: relative;
+}
+
+canvas {
+    cursor: crosshair;
+    display: block;
+}
+
+#clock,
+#snap {
+    bottom: 10px;
+    position: absolute;
+    color: gray;
+}
+
+#snap {
+    right: 20px;
+}
